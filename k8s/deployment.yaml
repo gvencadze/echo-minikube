@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-minikube
+  labels:
+    app: echo-minikube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-minikube
+  template:
+    metadata:
+      labels:
+        app: echo-minikube
+    spec:
+      containers:
+        - name: echo-minikube
+          image: k3rn3lpanic/echo-minikube
+          ports:
+            - containerPort: 3000
