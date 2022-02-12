@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/gvencadze/echo-minikube/internal"
 	"log"
 	"net/http"
+
+	"github.com/gvencadze/echo-minikube/internal"
 )
 
 func main() {
