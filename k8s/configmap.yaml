@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: echo-minikube-config
+  namespace: echo-minikube
+data:
+  foo: bar
+  user: $SECRET_USERNAME
+  password: $SECRET_PASSWORD
