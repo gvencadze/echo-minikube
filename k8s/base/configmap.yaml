@@ -1,8 +1,9 @@
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: echo-minikube-config
 data:
   config.yaml: |-
-        foo: bar
-        lorem: ipsum
+    foo: bar
+    lorem: ipsum
