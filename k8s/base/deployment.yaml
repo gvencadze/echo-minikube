@@ -19,6 +19,3 @@ spec:
           image: k3rn3lpanic/echo-minikube
           ports:
             - containerPort: 3000
-          volumeMounts:
-            - mountPath: /etc/config
-              name: echo-minikube-config
