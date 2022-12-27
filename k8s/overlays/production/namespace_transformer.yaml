@@ -1,0 +1,5 @@
+apiVersion: builtin
+kind: NamespaceTransformer
+metadata:
+  namespace: production
+unsetOnly: true

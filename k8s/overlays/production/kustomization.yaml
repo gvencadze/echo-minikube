@@ -6,5 +6,5 @@ namespace: production
 commonLabels:
   rendered-by: k8s-kustomize
   env: production
-
-namePrefix: production-
+transformers:
+  - namespace_transformer.yaml

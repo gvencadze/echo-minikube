@@ -6,5 +6,5 @@ namespace: dev
 commonLabels:
   rendered-by: k8s-kustomize
   env: dev
-
-namePrefix: dev-
+transformers:
+  - namespace_transformer.yaml

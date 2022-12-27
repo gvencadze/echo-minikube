@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: echo-minikube
-  labels:
-    env: k8s-in-docker
