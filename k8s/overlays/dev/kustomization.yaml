@@ -7,11 +7,4 @@ commonLabels:
   rendered-by: k8s-kustomize
   env: dev
 
-patches:
-  - target:
-      kind: Namespace
-      name: echo-minikube
-    patch: |-
-      - op: replace
-        path: /metadata/name
-        value: dev
+namePrefix: dev-
