@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: echo-minikube-service
-  namespace: default
+  namespace: echo-minikube
 spec:
   ports:
     - port: 8000

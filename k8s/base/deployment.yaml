@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo-minikube
-  namespace: default
+  namespace: echo-minikube
   labels:
     app: echo-minikube
 spec:
