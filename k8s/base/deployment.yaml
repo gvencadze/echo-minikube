@@ -20,17 +20,6 @@ spec:
           image: k3rn3lpanic/echo-minikube
           ports:
             - containerPort: 3000
-          env:
-            - name: SECRET_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: echo-minikube-secret
-                  key: username
-                  optional: false
-
-            - name: SECRET_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: echo-minikube-secret
-                  key: password
-                  optional: false
+          volumeMounts:
+            - mountPath: /etc/config
+              name: echo-minikube-config
