@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log"
 	"net/http"
 
@@ -20,6 +21,7 @@ func run() error {
 	r := mux.NewRouter()
 	apmgorilla.Instrument(r)
 
+	r.Handle("/metrics", promhttp.Handler())
 	r.HandleFunc("/hello", internal.Hello)
 
 	err := http.ListenAndServe(":7000", r)
