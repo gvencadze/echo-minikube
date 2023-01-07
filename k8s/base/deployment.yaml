@@ -19,4 +19,4 @@ spec:
           image: k3rn3lpanic/echo-minikube
           ports:
             - containerPort: 7000
-              name: echo-minikube-http
+              name: http
