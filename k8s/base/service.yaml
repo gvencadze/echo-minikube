@@ -4,7 +4,9 @@ metadata:
   name: echo-minikube-service
 spec:
   ports:
-    - port: 8000
+    - name: http
       protocol: TCP
+      port: 4000
+      targetPort: echo-minikube-http
   selector:
     app: echo-minikube
