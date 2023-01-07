@@ -22,7 +22,7 @@ func run() error {
 
 	r.HandleFunc("/hello", internal.Hello)
 
-	err := http.ListenAndServe(":3000", r)
+	err := http.ListenAndServe(":7000", r)
 	if err != nil {
 		return err
 	}

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: echo-minikube
-          image: k3rn3lpanic/echo-minikube
+          image: k3rn3lpanic/echo-minikube:latest
           ports:
             - containerPort: 7000
               name: http
