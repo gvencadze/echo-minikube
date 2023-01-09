@@ -9,4 +9,5 @@ spec:
     matchLabels:
       app: echo-minikube
   endpoints:
-    - port: http
+    - targetPort: 7000
+      path: /metrics
