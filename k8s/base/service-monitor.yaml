@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: echo-minikube
+  labels:
+    enable-monitoring: "true"
+spec:
+  selector:
+    matchLabels:
+      app: echo-minikube
+  endpoints:
+    - targetPort: 7000
+      path: /metrics

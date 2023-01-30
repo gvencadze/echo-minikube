@@ -16,6 +16,12 @@ spec:
     spec:
       containers:
         - name: echo-minikube
-          image: k3rn3lpanic/echo-minikube
+          image: k3rn3lpanic/echo-minikube:latest
+          env:
+            - name: ELASTIC_APM_SERVER_URL
+              value: http://apm.default:8200
+            - name: ELASTIC_APM_ENVIRONMENT
+              value: k8s-in-docker
           ports:
-            - containerPort: 3000
+            - containerPort: 7000
+              name: http
