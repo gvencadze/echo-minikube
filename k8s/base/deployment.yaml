@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: echo-minikube
-          image: k3rn3lpanic/echo-minikube:latest
+          image: ghcr.io/gvencadze/echo-minikube:latest
           env:
             - name: ELASTIC_APM_SERVER_URL
               value: http://apm.default:8200
@@ -25,3 +25,10 @@ spec:
           ports:
             - containerPort: 7000
               name: http
+          resources:
+            requests:
+              cpu: "0.25"
+              memory: "128Mi"
+            limits:
+              cpu: "0.25"
+              memory: "128Mi"
