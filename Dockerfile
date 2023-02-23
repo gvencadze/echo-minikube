@@ -13,12 +13,14 @@ COPY . .
 
 RUN CGO_ENABLED=0 go build main.go
 
-FROM alpine:latest as server
+FROM gcr.io/distroless/static AS final
+
+USER nonroot:nonroot
 
 WORKDIR /app
 
-COPY --from=builder /app/main ./
+COPY --from=builder --chown=nonroot:nonroot /app/main ./
 
 RUN chmod +x ./main
 
-CMD [ "./main" ]
+ENTRYPOINT [ "./main" ]
