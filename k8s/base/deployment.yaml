@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: echo-minikube
-          image: ghcr.io/gvencadze/echo-minikube:latest
+          image: ghcr.io/gvencadze/echo-minikube:master
           env:
             - name: ELASTIC_APM_SERVER_URL
               value: http://apm.default:8200
