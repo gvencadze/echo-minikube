@@ -18,5 +18,5 @@ jobs:
 
       - name: Build and push
         run: |
-          docker build . --tag ghcr.io/gvencadze/echo-minikube:latest
+          docker build  -t ghcr.io/gvencadze/echo-minikube:latest -f ./Dockerfile .
           docker push ghcr.io/gvencadze/echo-minikube:latest
